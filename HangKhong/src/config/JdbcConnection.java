@@ -10,9 +10,10 @@ public class JdbcConnection {
         try {
             String connectionUrl = "jdbc:mysql://localhost:3307/HangKhong";
             connection = DriverManager.getConnection(connectionUrl, "root", "Dat01229786411");
+            return connection;
         }catch(Exception ex) {
             ex.printStackTrace();
         }
-        return connection;
+        return null;
     }
 }

@@ -14,26 +14,37 @@ public class Main {
         CertificationRepository certificationRepository = new CertificationRepository();
         AircraftRepository aircraftRepository = new AircraftRepository();
 
-        staffRepository.listStaffs();
-        flightRepository.listFlights();
-        certificationRepository.listCertifications();
-        aircraftRepository.listAircrafts();
+        staffRepository.getListStaff();
+        flightRepository.getListFlight();
+        certificationRepository.getListCertification();
+        aircraftRepository.getListAircraft();
         staffRepository.createStaff();
 
-        flightRepository.listFlightsRequest1();
-        aircraftRepository.listAircraftsRequest2();
-        staffRepository.listStaffsRequest3();
-        flightRepository.listFlightsRequest4();
-        flightRepository.listFlightsRequest5();
-        System.out.println("Counting flights departing from Saigon: " + flightRepository.countFlightsRequest6());
-        System.out.println("Number of Boeing aircraft: " + aircraftRepository.countAircraftsRequest7());
-        System.out.println("Total salary to be paid to staffs: " + staffRepository.sumStaffsRequest8());
-        certificationRepository.listCertificationsRequest9();
-        certificationRepository.listCertificationsRequest10();
-        certificationRepository.listCertificationsRequest11();
-        certificationRepository.listCertificationsRequest12();
-        aircraftRepository.listAircraftsRequest13();
-        flightRepository.listFlightsRequest14();
-        certificationRepository.listCertificationsRequest15();
+        flightRepository.getListFlightFromDaLat();
+        aircraftRepository.getListTypeOfAircraftFlightRangeGreaterThan10000Km();
+        staffRepository.getListOfSalaryStaffLessThan10000();
+        flightRepository.getListFlightLenghtLessThan10000KmAndGreaterThan8000Km();
+        flightRepository.getListFlightFromSaiGonToBanMeThuoc();
+        System.out.println("Counting flights departing from Saigon: " + flightRepository.countFlightsStartSaiGon());
+        System.out.println("Number of Boeing aircraft: " + aircraftRepository.countTypeOfAircraftBoeing());
+        System.out.println("Total salary to be paid to staffs: " + staffRepository.sumSalaryOfStaff());
+        certificationRepository.getListOfCodeOfBoeingPilot();
+        certificationRepository.getListOfStaffCanFlyAirCraftCode747();
+        certificationRepository.getListOfCodeAirCraftForStaffLastNameNguyen();
+        certificationRepository.getListOfCodeStaffCanFlyAirCraftBoeingAndAirbus();
+        aircraftRepository.getListTypeOfAirCraftCanMakeFlightVN280();
+        flightRepository.getListOfFlightsCanBePerformedByAirbusA320();
+        certificationRepository.getListOfFullNameStaffFlyAirCraftBoeing();
+        certificationRepository.getListStaffCanFlyAircraft();
+        flightRepository.getListOfFlightFromStationAToBBackA();
+        flightRepository.getListOfStationAndNumberOfFlightOfStation();
+        flightRepository.getListOfStationAndSumPriceFlightOfStation();
+        flightRepository.getListOfFlightBefore12PM();
+        certificationRepository.getListOfCodeStaffOnlyFlyThreeAircraft();
+        certificationRepository.getListOfStaffCanFlyGreaterThan3AirCraft();
+        certificationRepository.getListOfStaffNumberOfAircraftCanFly();
+        staffRepository.getListOfStaffNoPilot();
+        staffRepository.getListOfStaffHaveHighestSalary();
+        staffRepository.getListOfPilotTotalSalaryPayments();
     }
 }
